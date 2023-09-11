@@ -1,6 +1,6 @@
 # TechieNerd Library Website
 
-![TechieNerd Logo](image/germany.jpg)
+![TechieNerd Logo](image/screenshot.png)
 
 This is the main repository for the TechieNerd library website. The website is designed to allow users to browse books by genre. This README provides an overview of the project structure, styles, and JavaScript code used to create the website.
 
