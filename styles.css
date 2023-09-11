@@ -1,0 +1,382 @@
+:root {
+  /* Light Color Scheme */
+  --background-color: #ffffff; /* White */
+  --primary-color: #4169e1; /* Royal Blue */
+  --secondary-color: #87ceeb; /* Light Blue */
+  --accent-color: #000080; /* Navy Blue */
+  --text-color: #000066; /* Dark Blue */
+  --p-font-size: calc(0.8rem + 0.5vw);
+  --h-font-size: calc(var(--p-font-size) * 1.5);
+}
+
+/* Box sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* removes margin padding and fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*  */
+ul[role="list"],
+ol[role="list"] {
+  list-style-type: none;
+}
+
+/*  */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: var(--p-font-size);
+}
+
+/* a:not([class]) {
+  text-decoration-skip-ink: auto;
+} */
+
+@supports (-moz-appearance:none) {
+  a:not {
+    text-decoration: underline;
+  }
+}
+
+image,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Font Styles */
+body {
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* header and top navbar style */
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(./image/germany.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.stick {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 1rem #02055284;
+  z-index: 100;
+}
+.navbar {
+  min-width: 100%;
+  padding: 0.2rem 3%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.916)
+  );
+}
+.navbar__brand,
+.navbar__menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar__link {
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+.navbar__logo,
+.footer__logo {
+  width: 2.5rem;
+  border-radius: 3px;
+}
+.navbar__text {
+  color: var(--text-color);
+  font-size: var(--h-font-size);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  list-style-type: none;
+}
+.navbar__item {
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  padding: 0.2rem;
+  transition: transform 0.5s;
+}
+.navbar__item:hover {
+  background-color: var(--accent-color);
+  margin-inline: 3px;
+  transform: scale(1.08);
+}
+.navbar__item:hover .navbar__link {
+  color: var(--background-color);
+}
+.navbar__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+/* introduction section */
+.introduction {
+  position: sticky;
+  top: 10rem;
+  left: 0;
+  padding: 3%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: min(4vw, 2rem);
+  color: var(--background-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #05030342;
+  transition: background-color 1s;
+}
+.introduction:hover {
+  background-color: #0503036d;
+}
+.introduction__title {
+  text-align: center;
+  font-size: calc(var(--h-font-size) + 2vw);
+  font-weight: 600;
+}
+.introduction__text {
+  text-align: center;
+  max-width: 70vw;
+  font-weight: 500;
+  text-align: center;
+}
+.intrests {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* the list of all genries */
+.genre__controls {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.genre__controls:hover .arrows {
+  display: block;
+}
+.section__title {
+  font-size: var(--h-font-size);
+  font-weight: 600;
+}
+.btn-container {
+  padding: 0.5rem 0.1rem;
+  width: 100%;
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.g-btn {
+  background-color: var(--background-color);
+  border: none;
+  padding: 0.2rem 0.4rem;
+  border: 2px solid;
+  border-radius: 5px;
+  white-space: nowrap;
+  color: var(--text-color);
+  transition: transform 1s;
+}
+.g-btn:hover,
+.active-btn {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+.arrows {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 0.55rem;
+  background-color: #201f1fb4;
+  display: none;
+}
+.left {
+  border-radius: 0 3px 3px 0;
+  left: 0.1rem;
+}
+.right {
+  border-radius: 3px 0 0 3px;
+  right: 0.1rem;
+}
+
+#collections,
+section {
+  padding: 1% 2%;
+  scroll-margin-top: 2.9rem;
+}
+
+.books-container {
+  padding: 3%;
+  width: 96%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.book {
+  border-radius: 10px;
+  background-color: #000080;
+  padding: 0.4rem;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.book:hover {
+  box-shadow: 6px 10px 20px #141ead9a;
+  transform: scale(1.06);
+}
+
+.book__cover {
+  width: 15rem;
+  height: 15rem;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+
+.book__title {
+  max-width: 13rem;
+  color: var(--background-color);
+  font-size: calc(var(--p-font-size) - 0.4rem);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Style for the About section */
+.about {
+  background-color: #f5f5f5;
+  padding: 4% 2%;
+}
+
+.section__title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.about__content {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about__creators {
+  font-weight: bold;
+}
+
+.about__contact em {
+  font-style: italic;
+}
+
+/* Style for the Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2.5rem 3%;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: 2rem;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+}
+
+.footer__list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__text {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.footer__year {
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer__list {
+  text-align: center;
+}
+
+.footer__list li {
+  display: inline-block;
+  margin: 0 10px;
+}
