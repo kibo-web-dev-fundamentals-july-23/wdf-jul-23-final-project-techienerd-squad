@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Tech, Books, Library, Knowledge">
+  <meta name="description" content="TechieNerd - Your Source for Tech Knowledge">
+  <meta name="author" content="TechieNerd Squad">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>TechieNerd Libary</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav__container">
+      <nav class="navbar">
+        <div class="navbar__brand">
+          <a href="#" class="navbar__link">
+            <img src="./image/tnslogo.jpg" alt="TechieNerd Logo" class="navbar__logo">
+            <h1 class="navbar__text">TechieNerd Libary</h1>
+          </a>
+        </div>
+        <div class="navbar__menu">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a class="navbar__link" href="#">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#collections">Collections</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <h2 class="introduction__title">Welcome to TechieNerd Libary</h2>
+      <p class="introduction__text">
+        Discover a world of knowledge in our digital library. Whether you're
+        interested in
+        <span class="intrests">
+          technology, history, business, psychology, web development, or
+          miscellaneous subjects
+        </span>
+        you'll find a treasure trove of books to explore.
+      </p>
+    </section>
+  </header>
+
+  <main id="collections">
+    <!-- Genre Buttons Section -->
+    <section class="genre-buttons">
+      <h2 class="section__title">Explore by Genre</h2>
+      <div class="genre__controls">
+        <img src="./svgs/bx-left-arrow-alt.svg" alt="" class="arrows left">
+        <div class="btn-container">
+          <button type="button" class="g-btn active-btn">All</button>
+        </div>
+        <img src="./svgs/bx-right-arrow-alt.svg" alt="" class="arrows right">
+      </div>
+    </section>
+
+    <!-- Book Listings (Sample: Technology Genre) -->
+    <section class="book-listings">
+      <h2 class="section__title bl__title">All</h2>
+      <div class="books-container">
+        <template>
+          <article class="book">
+            <img src="" alt="Cover image of Book" class="book__cover">
+            <h3 class="book__title"></h3>
+          </article>
+        </template>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2 class="section__title">About Us</h2>
+      <div class="about__content">
+        <p>
+          TechieNerd is a project developed by a group of Computer Science
+          students at Kibo school. You can find additional information about
+          the students by following the links to the
+          <strong>creators</strong> in the website's footer. <br><br>
+          Please note that TechieNerd is exclusively intended for
+          educational purposes and is not designed for any commercial gain.
+          However, if any party believes that the TechieNerd website is
+          violating their copyright, kindly contact us at
+          <strong class="about__contact"><em>rkutalian@gmail.com</em></strong> to request its
+          removal.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2 class="footer__title">Quick Links</h2>
+          <ul class="footer__list">
+            <li>
+              <a id="scroll-to-top-link" href="#">Scroll to Top</a>
+            </li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#collections">Collections</a>
+            </li>
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h2 class="footer__title">Creator</h2>
+          <ul class="footer__list">
+            <li>
+              <a href="https://github.com/kibo-web-dev-fundamentals-july-23/wdf-jul-23-final-project-techienerd-squad"
+                target="_blank" rel="noopener">Source Code</a>
+            </li>
+            <li>
+              <a href="https://github.com/Rachamv" target="_blank" rel="noopener">Adewunmi</a>
+            </li>
+            <li>
+              <a href="https://github.com/yemyet" target="_blank" rel="noopener">Oluwayemisi</a>
+            </li>
+            <li>
+              <a href="https://github.com/Ader3x" target="_blank" rel="noopener">Isaiah</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__text">TechieNerd &copy; <span class="footer__year"></span></p>
+        <p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
