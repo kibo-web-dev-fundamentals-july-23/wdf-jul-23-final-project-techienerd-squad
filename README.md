@@ -1,7 +1,7 @@
 # TechieNerd Library Website
 
 ![TechieNerd Logo](image/screenshot.png)
-![TechieNerd Live](https://kibo-web-dev-fundamentals-july-23.github.io/wdf-jul-23-final-project-techienerd-squad/)
+[TechieNerd Live](https://kibo-web-dev-fundamentals-july-23.github.io/wdf-jul-23-final-project-techienerd-squad/)
 
 
 This is the main repository for the TechieNerd library website. The website is designed to allow users to browse books by genre. This README provides an overview of the project structure, styles, and JavaScript code used to create the website.
